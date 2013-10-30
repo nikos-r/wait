@@ -13,12 +13,12 @@ Ext.define('NonQ.controller.Main', {
 	},
 	onSignInCommand: function(view, username, password) {
 	 	console.log('sign in');
-//	 	var loginView = this.getLoginView();
-//	 	loginView.setMasked({
-//	 			xtype:'loadmask',
-//	 			message: 'Signing in...'
-//	 		});
-//	 	this.signInSuccess();
+	 	var loginView = this.getLoginView();
+	 	loginView.setMasked({
+	 			xtype:'loadmask',
+	 			message: 'Signing in...'
+	 		});
+	 	this.signInSuccess();
 	},
 	signInSuccess: function() {
 	 	var loginView = this.getLoginView();

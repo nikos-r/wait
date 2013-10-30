@@ -1,6 +1,6 @@
 Ext.define('NonQ.view.Login', {
 	extend: 'Ext.form.Panel',
-	xtype: 'loginpanel',
+	xtype: 'loginview',
 	requires: ['Ext.form.FieldSet', 
 	           'Ext.form.Password', 
 	           'Ext.Label', 
@@ -52,18 +52,14 @@ Ext.define('NonQ.view.Login', {
 		}]
 	},
 	onLogInButtonTap : function() {
-	 	var usernameField = this.down('#userNameTextField');
+		var usernameField = this.down('#userNameTextField');
 	 	var passwordField = this.down('#passwordTextField');
 	 	
 	 	console.log(usernameField.getValue());
 	 	var task = Ext.create('Ext.util.DelayedTask', function () {
-			this.fireEvent('signInCommand', this, usernameField.getValue(), passwordField.getValue());
-			
-			usernameField.setValue('');
-			passwordField.setValue('');
-		});	
-	 	task.delay(500);
-//		task.call
+	 		this.fireEvent('signInCommand', this, usernameField.getValue(), passwordField.getValue());
+		}, this);	
+	 	task.delay(1000);
 	}
 
 		

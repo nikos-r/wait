@@ -52,7 +52,7 @@ requires: [
         */
         Ext.Viewport.add([
             { xtype: 'loginpanel' },
-            { xtype: 'mainmenupanel'}
+            { xtype: 'mainmenuview'}
         ]);
         
 //    	Ext.create('NonQ.view.Viewport');

@@ -1,7 +1,7 @@
 Ext.define('NonQ.view.MainMenu', {
 	extend: 'Ext.Panel',
 	requires: ['Ext.TitleBar'],
-	xtype: 'mainmenupanel',
+	xtype: 'mainmenuview',
 	config: {
 		layout: {
 			type: 'fit'
