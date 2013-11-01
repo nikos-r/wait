@@ -8,14 +8,20 @@ Ext.define('NonQ.view.MainMenu', {
 		},
 		items: [{
 		    xtype: 'titlebar',
-		    title: 'Main Menu',
+		    title: 'Non-Q',
 		    docked: 'top',
 		    items: [
 		        {
 		            xtype: 'button',
-		            text: 'Log Off',
-		            itemId: 'logOffButton',
-		            align: 'right'
+		            itemId: 'helpButton',
+		            align: 'right',
+			        iconCls: 'question'
+		        },
+		        {
+		            xtype: 'button',
+		            itemId: 'menuButton',
+		            align: 'left',
+			        iconCls: 'list'
 		        }
 		    ]
 		}]
