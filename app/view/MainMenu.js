@@ -6,25 +6,31 @@ Ext.define('NonQ.view.MainMenu', {
 		layout: {
 			type: 'fit'
 		},
-		items: [{
-		    xtype: 'titlebar',
-		    title: 'Non-Q',
-		    docked: 'top',
-		    items: [
-		        {
-		            xtype: 'button',
-		            itemId: 'helpButton',
-		            align: 'right',
-			        iconCls: 'question'
-		        },
-		        {
-		            xtype: 'button',
-		            itemId: 'menuButton',
-		            align: 'left',
-			        iconCls: 'list'
-		        }
-		    ]
-		}]
+		items: [
+		   {
+			    xtype: 'titlebar',
+			    title: 'Non-Q',
+			    docked: 'top',
+			    items: [
+			        {
+			            xtype: 'button',
+			            itemId: 'helpButton',
+			            align: 'right',
+				        iconCls: 'question'
+			        },
+			        {
+			            xtype: 'button',
+			            itemId: 'menuButton',
+			            align: 'left',
+				        iconCls: 'list'
+			        }
+			    ]
+			},
+			{
+				xtype:'dashboardview'				
+			}
+			
+		]
 			
 	}
 

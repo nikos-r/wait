@@ -19,7 +19,7 @@ requires: [
     ],
 */
 	views: [
-        'Login', 'MainMenu'
+        'Login', 'MainMenu', 'Dashboard'
     ],
 
     controllers: ['Main'],
@@ -52,7 +52,7 @@ requires: [
         */
         Ext.Viewport.add([
 //            { xtype: 'loginview' },
-            { xtype: 'mainmenuview'}
+            { xtype: 'mainmenuview'}, 
         ]);
         
 //    	Ext.create('NonQ.view.Viewport');
