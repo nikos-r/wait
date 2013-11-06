@@ -24,7 +24,7 @@ Ext.define('NonQ.view.DashboardButton', {
 	initialize: function() {
         this.element.on({
             tap: function() { 
-        		console.log(this); }
+        	console.log('tapped!'); }
         });
     }
 });
