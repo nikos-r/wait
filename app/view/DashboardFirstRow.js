@@ -1,28 +1,22 @@
 Ext.define('NonQ.view.DashboardFirstRow', {
 	extend: 'Ext.Panel',
+	requires: ['NonQ.view.DashboardButton'],
 	xtype: 'dashboardfirstrowview',
 	config: {
 		layout:{
 			type:'hbox',
 			pack: 'center'			 
 		},
-		style: "margin-left: 30%; margin-right: 30%;",
-		defaults: { flex: 1 },
+//		style: "margin-left: 30%; margin-right: 30%;",
 		items:[
        		{
-		    	xtype: 'button',
-		    	text: 'one',		    
-		    	style: 'padding: 10px'
+		    	xtype: 'dashboardbutton'		    	
 			},
 			{
-		    	xtype: 'button',
-		    	text: 'two', 
-		    	style: 'padding: 10px'
+		    	xtype: 'dashboardbutton'
 			},
 			{
-		    	xtype: 'button',
-		    	text: 'three',
-		    	style: 'padding: 10px'
+		    	xtype: 'dashboardbutton'
 			}				
 		]
 	}

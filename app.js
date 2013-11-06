@@ -19,7 +19,7 @@ requires: [
     ],
 */
 	views: [
-        'Login', 'MainMenu', 'Dashboard'
+        'Login', 'MainMenu', 'Dashboard', 'DashboardButton'
     ],
 
     controllers: ['Main'],

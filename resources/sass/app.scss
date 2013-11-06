@@ -6,6 +6,10 @@
 
 // Custom code goes here..
 
+.dashboardButton {
+	margin: 30px;
+}
+
 // Examples of using the icon mixin:
 // @include icon('user');
 @include icon('question');
