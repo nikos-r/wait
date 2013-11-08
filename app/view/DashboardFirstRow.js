@@ -7,16 +7,23 @@ Ext.define('NonQ.view.DashboardFirstRow', {
 			type:'hbox',
 			pack: 'center'			 
 		},
-//		style: "margin-left: 30%; margin-right: 30%;",
 		items:[
        		{
-		    	xtype: 'dashboardbutton'		    	
+		    	xtype: 'dashboardbutton',
+	    		buttonImage: 'resources/icons/login.jpg',
+   				buttonText: 'Login1'
+		    	
 			},
 			{
-		    	xtype: 'dashboardbutton'
+		    	xtype: 'dashboardbutton',
+	    		buttonImage: 'resources/icons/login.jpg',
+   				buttonText: 'Login2'
+		    	
 			},
 			{
-		    	xtype: 'dashboardbutton'
+		    	xtype: 'dashboardbutton',
+   				buttonImage: 'resources/icons/login.jpg',
+   				buttonText: 'Login3'	
 			}				
 		]
 	}

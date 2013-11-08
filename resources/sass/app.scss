@@ -6,9 +6,21 @@
 
 // Custom code goes here..
 
+$button_color: #5291C5;
+
 .dashboardButton {
 	margin: 30px;
 }
+
+.dashboardButtonPressed {
+	margin: 30px;
+	opacity: 0.8;
+	//-webkit-box-shadow: 9px 7px 4px rgba(50, 50, 50, 0.75);
+	//-moz-box-shadow:    9px 7px 4px rgba(50, 50, 50, 0.75);
+	//box-shadow:         9px 7px 4px rgba(50, 50, 50, 0.75);	
+}
+
+
 
 // Examples of using the icon mixin:
 // @include icon('user');
