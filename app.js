@@ -10,6 +10,13 @@
     will need to resolve manually.
 */
 
+//<debug>
+//Ext.Loader.setPath({
+//    'Ext': '../../src',
+//    'Ext.plugin': 'lib/plugin'
+//});
+//</debug>
+
 Ext.application({
     name: 'NonQ',
 	/*
@@ -19,7 +26,7 @@ requires: [
     ],
 */
 	views: [
-        'Login', 'MainMenu', 'Dashboard', 'DashboardButton'
+        'Login', 'MainMenu'
     ],
 
     controllers: ['Main'],

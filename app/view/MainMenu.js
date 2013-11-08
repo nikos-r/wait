@@ -1,10 +1,10 @@
 Ext.define('NonQ.view.MainMenu', {
 	extend: 'Ext.Panel',
-	requires: ['Ext.TitleBar'],
+	requires: ['Ext.TitleBar', 'NonQ.view.Dashboard', 'NonQ.view.Map'],
 	xtype: 'mainmenuview',
 	config: {
 		layout: {
-			type: 'fit'
+			type: 'vbox'
 		},
 		items: [
 		   {
@@ -28,6 +28,9 @@ Ext.define('NonQ.view.MainMenu', {
 			},
 			{
 				xtype:'dashboardview'				
+			},
+			{
+				xtype:'mapview'				
 			}
 			
 		]

@@ -1,47 +1,30 @@
 Ext.define('NonQ.view.Dashboard', {
 	xtype: 'dashboardview',
-	
-	/*
-	extend: 'Ext.Toolbar',
-	config:{
-		ui: 'neutral',
-	    scrollable: null,
-	    defaults: {
-	        ui: 'plain'
-	    },
-	    items: [
-	        { text: 'Round',iconCls: 'action',
-            ui: 'round'},
-	        { iconCls: 'add' },
-	        { iconCls: 'compose' },
-	        { iconCls: 'delete' },
-	        { iconCls: 'refresh' },
-	        { iconCls: 'reply' }
-	    ],
-	    layout: {
-	        pack : 'center',
-	        align: 'center'
-	    }
-	}
-	*/
 	extend: 'Ext.Panel',
-	requires: ['NonQ.view.DashboardFirstRow'],
-	
+	requires: ['NonQ.view.DashboardFirstRow', 
+	           'NonQ.view.DashboardSecondRow', 
+	           'NonQ.view.DashboardThirdRow',
+	],
 	config: {
 		layout:{
 			type:'vbox',
 			pack: 'center'			 
 		},
 		items:[
+		    { html:'Hi! Where are you going today?',
+		      style: 'text-align: center;'
+		    },
+		    
        		{
 		    	xtype: 'dashboardfirstrowview'
 			},
 			{
-		    	xtype: 'dashboardfirstrowview'
+		    	xtype: 'dashboardsecondrowview'
 			},
 			{
-		    	xtype: 'dashboardfirstrowview'		    	
-			}				
+		    	xtype: 'dashboardthirdrowview'		    	
+			}
+			
 		]
 	}
 	

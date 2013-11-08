@@ -1,7 +1,7 @@
-Ext.define('NonQ.view.DashboardFirstRow', {
+Ext.define('NonQ.view.DashboardSecondRow', {
 	extend: 'Ext.Panel',
 	requires: ['NonQ.view.DashboardButton'],
-	xtype: 'dashboardfirstrowview',
+	xtype: 'dashboardsecondrowview',
 	config: {
 		layout:{
 			type:'hbox',
@@ -11,18 +11,20 @@ Ext.define('NonQ.view.DashboardFirstRow', {
        		{
 		    	xtype: 'dashboardbutton',
 	    		buttonImage: 'resources/icons/login.jpg',
-   				buttonText: 'Alpha'
+   				buttonText: 'NBG'
 		    	
 			},
 			{
 		    	xtype: 'dashboardbutton',
 	    		buttonImage: 'resources/icons/login.jpg',
-   				buttonText: 'Piraeus'
+   				buttonText: 'OAEE'
+		    	
 			},
 			{
 		    	xtype: 'dashboardbutton',
    				buttonImage: 'resources/icons/login.jpg',
-   				buttonText: 'Eurobank'	
+   				buttonText: 'Εφορία',
+   				isDisabled: true
 			}				
 		]
 	}
