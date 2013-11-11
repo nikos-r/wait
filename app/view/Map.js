@@ -1,79 +1,47 @@
 Ext.define('NonQ.view.Map', {
 	xtype: 'mapview',
-	requires: ['Ext.Map',         'Ext.plugin.google.Traffic',
-    'Ext.plugin.google.Tracker'
-],
+	requires: ['Ext.Map'],
 	extend: 'Ext.Panel',
 	
+	
 	config: {
-		layout:{
-			type:'vbox',
-			pack: 'center'			 
-		},
+		layout:'vbox',		
 		items:[
 		    { html:'Check near you',
-		      style: 'text-align: center;'
+		      style: 'text-align: center;',
+		      docked: 'top'
 		    },
        		{
-       			xtype: 'map',
-//       			useCurrentLocation: true,
-	       		config: {
-	       			mapOptions : {
-	                center : new google.maps.LatLng(37.381592, -122.135672),  //nearby San Fran
-	                zoom : 12,
-	                mapTypeId : google.maps.MapTypeId.ROADMAP,
-	                navigationControl: true,
-	                navigationControlOptions: {
-	                    style: google.maps.NavigationControlStyle.DEFAULT
-	                }
-	            },
-
-	            plugins : [
-	                new Ext.plugin.google.Tracker({
-	                    trackSuspended: true,   //suspend tracking initially
-	                    allowHighAccuracy: false,
-	                    marker: new google.maps.Marker({
-	                        position: position,
-	                        title: 'My Current Location',
-	                        shadow: shadow,
-	                        icon: image
-	                    })
-	                }),
-	                new Ext.plugin.google.Traffic()
-	            ],
-	            mapListeners: {
-	                dragstart: function() {
-	                    var segmented = Ext.getCmp('segmented'),
-	                        pressedButtons = segmented.getPressedButtons().slice(),
-	                        trackingIndex = pressedButtons.indexOf(trackingButton);
-	                    if (trackingIndex != -1) {
-	                        pressedButtons.splice(trackingIndex, 1);
-	                        segmented.setPressedButtons(pressedButtons);
-	                    }
-	                }
-	            },
-
-	            listeners: {
-	                maprender: function(comp, map) {
-	                    var marker = new google.maps.Marker({
-	                        position: position,
-	                        title : 'Sencha HQ',
-	                        map: map
-	                    });
-
-	                    google.maps.event.addListener(marker, 'click', function() {
-	                        infowindow.open(map, marker);
-	                    });
-
-	                    setTimeout(function() {
-	                        map.panTo(position);
-	                    }, 1000);
-	                }
-
-	            }
-	       		}
-			}
+       			xtype:'panel',
+                layout:'fit',
+                flex: 1,
+                items:[
+                       {xtype:'map',
+                       itemId: 'map'
+                       }
+                ]
+       		}
 		]
+	},
+	initialize: function () {
+	     this.callParent(arguments);
+	     
+	     var map = this.down("#map");
+	     
+	     var positionAlpha = new google.maps.LatLng(37.989669, 23.729439);
+	     var positionNBG = new google.maps.LatLng(37.989669, 23.739439);
+	     map.getMap().panTo(positionAlpha);
+	     
+	     var markerAlpha = new google.maps.Marker({
+                        position: positionAlpha,
+                        title : 'Alpha Bank',
+                        map: map.getMap()
+                    });
+	     var markerNBG = new google.maps.Marker({
+                        position: positionNBG,
+                        title : 'NBG',
+                        map: map.getMap()
+                    });
 	}
 	
 });

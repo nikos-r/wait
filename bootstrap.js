@@ -641,9 +641,15 @@ Ext.ClassManager.addNameAlternateMappings({
     "Ext.viewport.WP"
   ],
   "NonQ.controller.Main": [],
+  "NonQ.view.Dashboard": [],
+  "NonQ.view.DashboardButton": [],
+  "NonQ.view.DashboardFirstRow": [],
+  "NonQ.view.DashboardSecondRow": [],
+  "NonQ.view.DashboardThirdRow": [],
   "NonQ.view.Login": [],
   "NonQ.view.Main": [],
-  "NonQ.view.MainMenu": []
+  "NonQ.view.MainMenu": [],
+  "NonQ.view.Map": []
 });
 Ext.ClassManager.addNameAliasMappings({
   "Ext.AbstractComponent": [],
@@ -1363,6 +1369,21 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
   "NonQ.controller.Main": [],
+  "NonQ.view.Dashboard": [
+    "widget.dashboardview"
+  ],
+  "NonQ.view.DashboardButton": [
+    "widget.dashboardbutton"
+  ],
+  "NonQ.view.DashboardFirstRow": [
+    "widget.dashboardfirstrowview"
+  ],
+  "NonQ.view.DashboardSecondRow": [
+    "widget.dashboardsecondrowview"
+  ],
+  "NonQ.view.DashboardThirdRow": [
+    "widget.dashboardthirdrowview"
+  ],
   "NonQ.view.Login": [
     "widget.loginview"
   ],
@@ -1371,5 +1392,8 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "NonQ.view.MainMenu": [
     "widget.mainmenuview"
+  ],
+  "NonQ.view.Map": [
+    "widget.mapview"
   ]
 });

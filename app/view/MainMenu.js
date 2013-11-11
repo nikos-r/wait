@@ -3,9 +3,7 @@ Ext.define('NonQ.view.MainMenu', {
 	requires: ['Ext.TitleBar', 'NonQ.view.Dashboard', 'NonQ.view.Map'],
 	xtype: 'mainmenuview',
 	config: {
-		layout: {
-			type: 'vbox'
-		},
+		layout: 'vbox',		
 		items: [
 		   {
 			    xtype: 'titlebar',
@@ -27,11 +25,17 @@ Ext.define('NonQ.view.MainMenu', {
 			    ]
 			},
 			{
-				xtype:'dashboardview'				
+				xtype:'dashboardview',
+				flex: 3
 			},
 			{
-				xtype:'mapview'				
+				//whereever the map appears it needs to be in a panel with fit layout
+				xtype:'panel',
+	            layout:'fit',
+	            flex: 1,	            
+	            items:[{xtype:'mapview'}]				
 			}
+			
 			
 		]
 			
