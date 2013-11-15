@@ -10,7 +10,7 @@ Ext.define('NonQ.view.DashboardFirstRow', {
 		items:[
        		{
 		    	xtype: 'dashboardbutton',
-	    		buttonImage: 'resources/icons/login.jpg',
+	    		buttonImage: 'resources/icons/alphaline_117x110.png',
    				buttonText: 'Alpha'
 		    	
 			},

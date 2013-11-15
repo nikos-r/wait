@@ -136,7 +136,7 @@
 	 * @cfg  sdkPath
 	 * This is the path to the Android SDK, if you are developing an Android application.
 	 */
-	"sdkPath":"/opt/adt-bundle-linux-x86-20130917/sdk",
+	"sdkPath":"../../../adt-bundle-windows-x86_64-20130729/sdk",
 
 	/**
 	 * @cfg  androidAPILevel
