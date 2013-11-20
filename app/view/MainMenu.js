@@ -14,8 +14,7 @@ Ext.define('NonQ.view.MainMenu', {
 			            xtype: 'button',
 			            itemId: 'helpButton',
 			            align: 'right',
-				        iconCls: 'question',
-				        html: "Help"
+				        iconCls: 'question'
 			        },
 			        {
 			            xtype: 'button',

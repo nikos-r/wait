@@ -24,7 +24,7 @@ Ext.define('NonQ.view.DashboardButton', {
 		       ,
 		       {itemId: 'dashboardTextItem',
 	    	    docked: 'bottom',
-	    	    style: 'text-align: center;'
+	    	    style: 'text-align: center; font-size: 80%'
 		       }
 		]
 	},
@@ -33,7 +33,7 @@ Ext.define('NonQ.view.DashboardButton', {
 		this.down("#dashboardImageItem").setSrc(this.getButtonImage());
 		this.down("#dashboardTextItem").setHtml(this.getButtonText());
 		if(this.getIsDisabled()){
-			this.element.addCls('dashboardButtonPressed')
+			this.element.addCls('dashboardButtonDisabled')
 		}
 			
         this.element.on({ 
