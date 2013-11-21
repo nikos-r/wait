@@ -1,7 +1,14 @@
-$base-color: #1C94C4;
+//$base-color: #1C94C4;
+$base-color: #f5a422;
 //$page-bg-color:linear-gradient(to bottom, rgba(252,255,244,1) 0%,rgba(233,233,206,1) 100%);
 //$page-bg-color: lighten($base_color, 30%);
-$page-bg-color: rgba(132, 213, 230, 1);
+$page-bg-color:  #76a096;
+
+.x-toolbar-dark .x-title{
+	color: white !important;
+}
+
+
 
 // The following two lines import the default Sencha Touch theme. If you are building
 // a new theme, remove them and the add your own CSS on top of the base CSS (which
