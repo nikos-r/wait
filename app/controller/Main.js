@@ -3,13 +3,29 @@ Ext.define('NonQ.controller.Main', {
 	config: {
 		refs: {
 		    loginView: 'loginview',
-		    mainMenuView: 'mainmenuview'
+		    mainMenuView: 'mainmenuview',
+		    menuView: 'menuview'
 		},
 		control: {
 		    loginView: {
 		        signInCommand: 'onSignInCommand'
+		    },
+		    mainMenuView:{
+		    	menuShowCommand: 'onMenuShowCommand'
+		    },
+		    menuView:{
+		    	menuHideCommand: 'onMenuHideCommand'
 		    }
+		    
 		}
+	},
+	onMenuHideCommand : function(){
+		var menuView = this.getMenuView();
+		menuView.hide();
+	},
+	onMenuShowCommand: function(){
+		var menuView = this.getMenuView();
+		menuView.show();
 	},
 	onSignInCommand: function(view, username, password) {
 	 	console.log('sign in');
@@ -31,5 +47,9 @@ Ext.define('NonQ.controller.Main', {
 	},
 	init: function() {
 	 	console.log('inited');
+	 	this.mainMenuView = Ext.create('NonQ.view.Menu');
+	 	this.mainMenuView.hide();
+	 	//TODO check when views should be created/initialized, etc.
+	 	Ext.Viewport.add(this.mainMenuView);
 	}
 })

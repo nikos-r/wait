@@ -24,7 +24,7 @@ Ext.application({
 //        'Ext.util.GeoLocation', 'Ext.Toolbar','Ext.Map', 'NonQ.view.Map'
     ],
 	views: [
-        'Login', 'MainMenu'
+        'Login', 'MainMenu', 'Menu'
     ],
 
     controllers: ['Main'],
@@ -131,8 +131,7 @@ console.log(geo.getLongitude());
     launch: function() {
         Ext.Viewport.add([
 //            { xtype: 'loginview' },
-            { xtype: 'mainmenuview'}
-				
+            { xtype: 'mainmenuview'}            				
         ]);
     },
     

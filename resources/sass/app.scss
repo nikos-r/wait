@@ -8,6 +8,9 @@ $page-bg-color:  #76a096;
 	color: white !important;
 }
 
+.x-dock-body{
+	color: white !important;
+}
 
 
 // The following two lines import the default Sencha Touch theme. If you are building
@@ -29,12 +32,12 @@ $page-bg-color:  #76a096;
 	@include border-radius(10px);
 	border: 0.1em solid $base_color;
 	//background: linear-gradient(color-stops(lighten($base_color, 30%), lighten($base_color, 15%) 4%, $base_color));
-	background: linear-gradient(to top, color-stops(lighten($page-bg-color, 30%), lighten($page-bg-color, 15%) 4%, $page-bg-color));
-	//background: linear-gradient(white, lighten($base-color, 20%));	
+	//background: linear-gradient(white, lighten($base-color, 20%));
+	background: linear-gradient(to bottom, color-stops(lighten($page-bg-color, 30%), lighten($page-bg-color, 15%) 4%, $page-bg-color));
 }
 
 .dashboardButtonPressed {
-	background: linear-gradient(to bottom, color-stops(lighten($page-bg-color, 30%), lighten($page-bg-color, 15%) 4%, $page-bg-color));
+	background: linear-gradient(to top, color-stops(lighten($page-bg-color, 30%), lighten($page-bg-color, 15%) 4%, $page-bg-color));
 }
 
 .dashboardButtonDisabled {

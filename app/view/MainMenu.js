@@ -13,13 +13,13 @@ Ext.define('NonQ.view.MainMenu', {
 			        {
 			            xtype: 'button',
 			            itemId: 'helpButton',
-			            align: 'right',
+			            align: 'left',
 				        iconCls: 'question'
 			        },
 			        {
 			            xtype: 'button',
 			            itemId: 'menuButton',
-			            align: 'left',
+			            align: 'right',
 				        iconCls: 'list'
 			        }
 			    ]
@@ -35,10 +35,15 @@ Ext.define('NonQ.view.MainMenu', {
 	            flex: 1,	            
 	            items:[{xtype:'mapview'}]				
 			}
-			
-			
-		]
-			
+		],
+		listeners: [{
+		    delegate: '#menuButton',
+		    event: 'tap',
+		    fn: 'onMenuShowTap'
+		}]	
+	},
+	onMenuShowTap : function() {
+	 	console.log('show menu');
+ 		this.fireEvent('menuShowCommand');
 	}
-
 })

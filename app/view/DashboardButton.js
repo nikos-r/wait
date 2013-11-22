@@ -7,6 +7,7 @@ Ext.define('NonQ.view.DashboardButton', {
 		buttonImage: null,
 		buttonText: null,
 		isDisabled: false,
+		imageWidth: null,
 		layout:{
 			type:'vbox',
 			pack: 'center',
@@ -17,8 +18,7 @@ Ext.define('NonQ.view.DashboardButton', {
 		},
 		items:[
 		       {xtype: 'image',
-		        itemId: 'dashboardImageItem'
-		        	,
+		        itemId: 'dashboardImageItem',
 		        style: 'width: 100%'
 		       }
 		       ,
@@ -32,9 +32,17 @@ Ext.define('NonQ.view.DashboardButton', {
 		this.callParent();
 		this.down("#dashboardImageItem").setSrc(this.getButtonImage());
 		this.down("#dashboardTextItem").setHtml(this.getButtonText());
-		if(this.getIsDisabled()){
-			this.element.addCls('dashboardButtonDisabled')
+		if(this.getImageWidth()!=null){
+			var style = "background-size:"+this.getImageWidth()+"em";
+			console.log(style);
+			this.down("#dashboardImageItem").setStyle(style);
 		}
+		
+		if(this.getIsDisabled()){
+			this.element.addCls('dashboardButtonDisabled');
+		}
+		
+		
 			
         this.element.on({ 
         	scope: this,
