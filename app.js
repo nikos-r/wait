@@ -130,7 +130,7 @@ console.log(geo.getLongitude());
     
     launch: function() {
         Ext.Viewport.add([
-//            { xtype: 'loginview' },
+            { xtype: 'loginview' },
             { xtype: 'mainmenuview'}            				
         ]);
     },

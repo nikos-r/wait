@@ -3,12 +3,26 @@ $base-color: #f5a422;
 //$page-bg-color:linear-gradient(to bottom, rgba(252,255,244,1) 0%,rgba(233,233,206,1) 100%);
 //$page-bg-color: lighten($base_color, 30%);
 $page-bg-color:  #76a096;
+$dashboard-button-color: $page-bg-color;
+$menu-button-color: darken($dashboard-button-color, 30%);
+$form-bg-color: $page-bg-color; 
+
+.x-field-input{
+	background: lighten($base-color, 40%) !important;
+}
+.x-form-field{
+	background: lighten($base-color, 40%) !important;
+}
 
 .x-toolbar-dark .x-title{
 	color: white !important;
 }
 
 .x-dock-body{
+	color: white !important;
+}
+
+.x-button{
 	color: white !important;
 }
 
@@ -23,6 +37,27 @@ $page-bg-color:  #76a096;
 //buttons
 //http://dev.sencha.com/deploy/touch/examples/production/toolbars/
 
+.menu {
+ 	background: $menu-button-color;
+ 	
+ 	.x-list-item{
+ 		color: white;
+ 		border-top: 1px solid $base-color !important;
+ 		
+ 	}
+ 	.x-list-item-last {
+ 		border-bottom: 1px solid $base-color !important;
+ 	}
+ 	.x-item-pressed{
+ 		background: $base-color !important;
+ 	}
+}
+
+.menuButton {
+	border: 0.1em solid $base_color;
+	color: $base_color;
+	background: linear-gradient(to top, color-stops(lighten($menu-button-color, 30%), lighten($menu-button-color, 15%) 4%, $menu-button-color));
+}
 
 .dashboardButton {
 	margin: 1em;
@@ -33,11 +68,11 @@ $page-bg-color:  #76a096;
 	border: 0.1em solid $base_color;
 	//background: linear-gradient(color-stops(lighten($base_color, 30%), lighten($base_color, 15%) 4%, $base_color));
 	//background: linear-gradient(white, lighten($base-color, 20%));
-	background: linear-gradient(to bottom, color-stops(lighten($page-bg-color, 30%), lighten($page-bg-color, 15%) 4%, $page-bg-color));
+	background: linear-gradient(to bottom, color-stops(lighten($dashboard-button-color, 30%), lighten($dashboard-button-color, 15%) 4%, $dashboard-button-color));
 }
 
 .dashboardButtonPressed {
-	background: linear-gradient(to top, color-stops(lighten($page-bg-color, 30%), lighten($page-bg-color, 15%) 4%, $page-bg-color));
+	background: linear-gradient(to top, color-stops(lighten($dashboard-button-color, 30%), lighten($dashboard-button-color, 15%) 4%, $dashboard-button-color));
 }
 
 .dashboardButtonDisabled {
@@ -46,5 +81,7 @@ $page-bg-color:  #76a096;
 
 
 // Examples of using the icon mixin:
-// @include icon('user');
 @include icon('question');
+@include icon('table');
+@include icon('bell');
+@include icon('case');
